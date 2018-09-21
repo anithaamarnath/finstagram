@@ -72,7 +72,7 @@ get '/finstagram_posts/new' do
   erb(:"finstagram_posts/new")
 end
 
-post '/finstagram_posts' do
+post '/finstagram_posts/new' do
   photo_url = params[:photo_url]
 
   @finstagram_post = FinstagramPost.new({ photo_url: photo_url, user_id: current_user.id })
